@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางนัดหมาย</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/แดชบอร์ด.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/คำขออนุมัติ.html"><p>คำขออนุมัติ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/โครงงานที่ดูแล.html"><p>โครงงานที่ดูแล</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตรวจความก้าวหน้า.html"><p>ตรวจความก้าวหน้า</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/การอนุมัติสอบ.html"><p>อนุมัติการสอบ</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/อาจารย์/ตารางนัดเวลา.html"><p>ตารางนัดหมาย</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>ตารางนัดหมาย</h1>
+                </div>
+                <div class="user-avatar">👤</div>
+            </div>
+
+            <div class="content-section">
+                <!-- Date Navigation -->
+                <div class="filter-section" style="grid-template-columns: auto 1fr auto;">
+                    <button class="btn-filter">วันนี้</button>
+                    <div class="filter-group">
+                        <label>เลือกวันที่</label>
+                        <input type="date" class="filter-input" value="2025-10-07">
+                    </div>
+                    <button class="btn btn-approve" style="align-self: flex-end; margin: 0;">+ สร้างนัดหมาย</button>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <h3>นัดหมายวันนี้</h3>
+                        <div class="number">4</div>
+                    </div>
+                    <div class="stat-card" style="border-left-color: #3b82f6; background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);">
+                        <h3>นัดหมายสัปดาห์นี้</h3>
+                        <div class="number" style="color: #3b82f6;">12</div>
+                    </div>
+                    <div class="stat-card" style="border-left-color: #8b5cf6; background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%);">
+                        <h3>นัดหมายเดือนนี้</h3>
+                        <div class="number" style="color: #8b5cf6;">28</div>
+                    </div>
+                </div>
+
+                <!-- Today's Schedule -->
+                <div class="section-title">
+                    <h2>ตารางวันนี้ - 7 ตุลาคม 2568</h2>
+                </div>
+
+                <div class="appointment-list">
+                    <!-- Morning -->
+                    <div class="appointment-item" style="border-left-color: #3b82f6;">
+                        <div class="appointment-time" style="color: #3b82f6;">09:00 - 10:00</div>
+                        <div class="appointment-details">
+                            <h4>ประชุมหารือโครงงาน</h4>
+                            <p>โครงงาน: ระบบจัดการโครงงานออนไลน์</p>
+                            <p>กลุ่ม: นายสมชาย รักเรียน และคณะ (3 คน)</p>
+                            <p>📍 ห้อง 601 อาคารวิศวกรรม</p>
+                        </div>
+                    </div>
+
+                    <div class="appointment-item" style="border-left-color: #10b981;">
+                        <div class="appointment-time" style="color: #10b981;">10:30 - 11:30</div>
+                        <div class="appointment-details">
+                            <h4>ตรวจสอบความก้าวหน้า</h4>
+                            <p>โครงงาน: แอปพลิเคชันจัดการคลังสินค้า</p>
+                            <p>กลุ่ม: นางสาวสมหญิง ใจดี และคณะ (2 คน)</p>
+                            <p>🌐 ออนไลน์ผ่าน Google Meet</p>
+                        </div>
+                    </div>
+
+                    <!-- Afternoon -->
+                    <div class="appointment-item" style="border-left-color: #f59e0b;">
+                        <div class="appointment-time" style="color: #f59e0b;">13:00 - 14:00</div>
+                        <div class="appointment-details">
+                            <h4>ปรึกษาปัญหาโครงงาน</h4>
+                            <p>โครงงาน: ระบบ AI ช่วยวิเคราะห์ข้อมูล</p>
+                            <p>กลุ่ม: นายวิชัย เก่งกาจ และคณะ (4 คน)</p>
+                            <p>📍 ห้องพักอาจารย์</p>
+                        </div>
+                    </div>
+
+                    <div class="appointment-item" style="border-left-color: #ef4444;">
+                        <div class="appointment-time" style="color: #ef4444;">15:00 - 16:30</div>
+                        <div class="appointment-details">
+                            <h4>สอบหัวข้อโครงงาน</h4>
+                            <p>โครงงาน: เว็บแอปพลิเคชันจองห้องประชุม</p>
+                            <p>กลุ่ม: นายประยุทธ์ มานะดี และคณะ (3 คน)</p>
+                            <p>📍 ห้อง 701 อาคารวิศวกรรม</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Appointments -->
+                <div class="section-title" style="margin-top: 40px;">
+                    <h2>นัดหมายที่จะถึง</h2>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>วันที่</th>
+                                <th>เวลา</th>
+                                <th>หัวข้อ</th>
+                                <th>โครงงาน</th>
+                                <th>นักศึกษา</th>
+                                <th>สถานที่</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08/10/2025</td>
+                                <td>09:00 - 10:30</td>
+                                <td>ตรวจสอบความก้าวหน้า</td>
+                                <td>Mobile Application สำหรับสั่งอาหาร</td>
+                                <td>นางสาวอรุณี สว่างไสว</td>
+                                <td>ห้อง 505</td>
+                            </tr>
+                            <tr>
+                                <td>08/10/2025</td>
+                                <td>14:00 - 15:00</td>
+                                <td>ประชุมหารือ</td>
+                                <td>ระบบตรวจสอบคุณภาพอากาศ IoT</td>
+                                <td>นายธีรพงษ์ รักษ์ชาติ</td>
+                                <td>Online</td>
+                            </tr>
+                            <tr>
+                                <td>09/10/2025</td>
+                                <td>10:00 - 11:00</td>
+                                <td>ปรึกษาปัญหา</td>
+                                <td>ระบบจัดการโครงงานออนไลน์</td>
+                                <td>นายสมชาย รักเรียน</td>
+                                <td>ห้องพักอาจารย์</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2025</td>
+                                <td>13:00 - 14:30</td>
+                                <td>ตรวจความก้าวหน้า</td>
+                                <td>แอปพลิเคชันจัดการคลังสินค้า</td>
+                                <td>นางสาวสมหญิง ใจดี</td>
+                                <td>ห้อง 601</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Weekly Calendar View -->
+                <div class="section-title" style="margin-top: 40px;">
+                    <h2>ปฏิทินสัปดาห์นี้</h2>
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; min-width: 900px;">
+                        <!-- Monday -->
+                        <div style="background: white; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">จันทร์</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #1e293b;">7</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #dbeafe; border-radius: 6px; margin-bottom: 5px; border-left: 3px solid #3b82f6;">
+                                <div style="font-weight: 600; color: #1e40af;">09:00 ประชุม</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #d1fae5; border-radius: 6px; margin-bottom: 5px; border-left: 3px solid #10b981;">
+                                <div style="font-weight: 600; color: #065f46;">10:30 ตรวจ</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #fef3c7; border-radius: 6px; margin-bottom: 5px; border-left: 3px solid #f59e0b;">
+                                <div style="font-weight: 600; color: #92400e;">13:00 ปรึกษา</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #fecaca; border-radius: 6px; border-left: 3px solid #ef4444;">
+                                <div style="font-weight: 600; color: #991b1b;">15:00 สอบ</div>
+                            </div>
+                        </div>
+
+                        <!-- Tuesday -->
+                        <div style="background: white; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">อังคาร</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #1e293b;">8</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #d1fae5; border-radius: 6px; margin-bottom: 5px; border-left: 3px solid #10b981;">
+                                <div style="font-weight: 600; color: #065f46;">09:00 ตรวจ</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #dbeafe; border-radius: 6px; border-left: 3px solid #3b82f6;">
+                                <div style="font-weight: 600; color: #1e40af;">14:00 ประชุม</div>
+                            </div>
+                        </div>
+
+                        <!-- Wednesday -->
+                        <div style="background: white; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">พุธ</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #1e293b;">9</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #fef3c7; border-radius: 6px; border-left: 3px solid #f59e0b;">
+                                <div style="font-weight: 600; color: #92400e;">10:00 ปรึกษา</div>
+                            </div>
+                        </div>
+
+                        <!-- Thursday -->
+                        <div style="background: white; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">พฤหัสบดี</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #1e293b;">10</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #d1fae5; border-radius: 6px; border-left: 3px solid #10b981;">
+                                <div style="font-weight: 600; color: #065f46;">13:00 ตรวจ</div>
+                            </div>
+                        </div>
+
+                        <!-- Friday -->
+                        <div style="background: white; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">ศุกร์</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #1e293b;">11</div>
+                            </div>
+                            <div style="font-size: 11px; padding: 8px; background: #fecaca; border-radius: 6px; border-left: 3px solid #ef4444;">
+                                <div style="font-weight: 600; color: #991b1b;">09:00 สอบ</div>
+                            </div>
+                        </div>
+
+                        <!-- Saturday -->
+                        <div style="background: #f8fafc; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">เสาร์</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #94a3b8;">12</div>
+                            </div>
+                            <div style="text-align: center; color: #94a3b8; font-size: 12px; padding: 20px;">ว่าง</div>
+                        </div>
+
+                        <!-- Sunday -->
+                        <div style="background: #f8fafc; border-radius: 12px; padding: 15px; border: 2px solid #e2e8f0;">
+                            <div style="text-align: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9;">
+                                <div style="font-size: 12px; color: #64748b;">อาทิตย์</div>
+                                <div style="font-size: 24px; font-weight: 700; color: #94a3b8;">13</div>
+                            </div>
+                            <div style="text-align: center; color: #94a3b8; font-size: 12px; padding: 20px;">ว่าง</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

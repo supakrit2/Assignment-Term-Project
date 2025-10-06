@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เสนอหัวข้อโครงงาน - KMUTNB</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ศุภกฤต จีวิระ</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสนักศึกษา:</label>
+                    <p>6806022610xxx</p>
+                </div>
+                <div class="info-item">
+                    <label>สาขา:</label>
+                    <p>วิศวกรรมคอมพิวเตอร์</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>s6806022610xxx@email.kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>08953868xx</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/นักศึกษา/เสนอหัวข้อโครงงาน.html"><p>เสนอหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบหัวข้อโครงงาน.html"><p>ยื่นสอบหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ความก้าวหน้าโครงงาน.html"><p>ความก้าวหน้าโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบโครงงาน.html"><p>ยื่นสอบโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge">
+                      <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>  
+                    </div>
+                    <h1>เสนอหัวข้อโครงงาน</h1>
+                </div>
+                <div class="user-avatar" id="userAvatar">👤</div>
+            </div>
+
+            <div class="content-section">
+                <div class="field">
+                    <label>ชื่อโครงงาน :</label>
+                    <input type="text" placeholder="กรอกชื่อโครงงาน">
+                </div>
+
+                <div class="field">
+                    <label>ที่มาและความสำคัญ :</label>
+                    <textarea placeholder="อธิบายที่มาและความสำคัญของโครงงาน"></textarea>
+                </div>
+                
+                <div class="field">
+                    <label>วัตถุประสงค์ :</label>
+                    <textarea placeholder="ระบุวัตถุประสงค์ของโครงงาน"></textarea>
+                </div>
+                
+                <div class="field">
+                    <label>ขั้นตอนการดำเนินงาน :</label>
+                    <textarea placeholder="อธิบายขั้นตอนการดำเนินงาน"></textarea>
+                </div>
+
+                <div class="field1">
+                    <label>รายชื่อผู้จัดทำ :</label>
+                    <input type="text" placeholder="ระบุรายชื่อผู้จัดทำทั้งหมด">
+                    <input type="text" placeholder="รหัสนักศึกษา">
+                </div>
+                <div class="field1">
+                    <label>รายชื่อผู้จัดทำ :</label>
+                    <input type="text" placeholder="ระบุรายชื่อผู้จัดทำทั้งหมด">
+                    <input type="text" placeholder="รหัสนักศึกษา">
+                </div>
+                <div class="field1">
+                    <label>รายชื่อผู้จัดทำ :</label>
+                    <input type="text" placeholder="ระบุรายชื่อผู้จัดทำทั้งหมด">
+                    <input type="text" placeholder="รหัสนักศึกษา">
+                </div>
+
+                <div class="field1">
+                    <label>อาจารย์ที่ปรึกษา :</label>
+                    <select class="select-box">
+                        <option value="">-- เลือกอาจารย์ที่ปรึกษา --</option>
+                        <option value="1">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                        <option value="2">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                        <option value="3">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                        <option value="4">ผศ.ดร.ขนิษฐา นามี</option>
+                        <option value="5">ผศ.จสต.นพเก้า ทองใบ</option>
+                        <option value="6">อ.ดร.กาญจน ณ ศรีธะ</option>
+                        <option value="7">ผศ.นพดล บูรณ์กุศล</option>
+                        <option value="8">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                        <option value="9">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                        <option value="10">ผศ.นิมิต ศรีคำทา</option>
+                        <option value="11">อ.ดร.พิทย์พิมล ชูรอด</option>
+                        <option value="12">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                        <option value="13">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                        <option value="14">ผศ.พีระศักดิ์ เสรีกุล</option>
+                        <option value="15">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                        <option value="16">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                        <option value="17">ผศ.สิวาลัย จินเจือ</option>
+                        <option value="18">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                        <option value="19">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                        <option value="20">อ.ดร.ศิรินทรา แว่วศรี</option>
+                        <option value="21">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                        <option value="22">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                        <option value="23">รศ.ดร.ยุพิน สรรพคุณ</option>
+                    </select>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-submit">ยื่นสอบโครงงาน</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const userAvatar = document.getElementById('userAvatar');
+        const profileModal = document.getElementById('profileModal');
+        const closeBtn = document.querySelector('.close');
+        const btnLogout = document.querySelector('.btn-logout');
+        const btnEdit = document.querySelector('.btn-edit');
+
+        document.addEventListener('selectstart', function(e) {
+            if (e.target.classList.contains('user-avatar') || 
+                e.target.classList.contains('close') ||
+                e.target.tagName === 'BUTTON') {
+                e.preventDefault();
+            }
+        });
+
+        function openModal() {
+            profileModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            profileModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        if (userAvatar) {
+            userAvatar.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openModal();
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeModal();
+            });
+        }
+
+        window.addEventListener('click', function(event) {
+            if (event.target === profileModal) {
+                closeModal();
+            }
+        });
+
+        const modalContent = document.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && profileModal.style.display === 'block') {
+                closeModal();
+            }
+        });
+
+        let isLoggingOut = false;
+        if (btnLogout) {
+            btnLogout.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isLoggingOut) return;
+                isLoggingOut = true;
+                
+                if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
+                    alert('ออกจากระบบสำเร็จ');
+                    closeModal();
+                }
+                
+                setTimeout(() => {
+                    isLoggingOut = false;
+                }, 500);
+            });
+        }
+
+        let isEditing = false;
+        if (btnEdit) {
+            btnEdit.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isEditing) return;
+                isEditing = true;
+                
+                alert('เปิดหน้าแก้ไขข้อมูล');
+                closeModal();
+                
+                setTimeout(() => {
+                    isEditing = false;
+                }, 500);
+            });
+        }
+    </script>
+</body>
+</html>

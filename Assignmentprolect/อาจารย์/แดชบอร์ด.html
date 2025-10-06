@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรกอาจารย์</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ผศ.ดร.สมชาย ใจดี</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสอาจารย์:</label>
+                    <p>T2024001</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>somchai.j@kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>02-555-2000</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item active">
+                <a href="/อาจารย์/แดชบอร์ด.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/คำขออนุมัติ.html"><p>คำขออนุมัติ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/โครงงานที่ดูแล.html"><p>โครงงานที่ดูแล</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตรวจความก้าวหน้า.html"><p>ตรวจความก้าวหน้า</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/การอนุมัติสอบ.html"><p>อนุมัติการสอบ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตารางนัดเวลา.html"><p>ตารางนัดหมาย</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>หน้าแรก - อาจารย์ที่ปรึกษา</h1>
+                </div>
+                <div class="user-avatar" id="userAvatar">👤</div>
+            </div>
+
+            <div class="content-section">
+                <!-- Dashboard Summary Cards -->
+                <div class="dashboard-grid">
+                    <div class="summary-card card-orange">
+                        <div class="card-icon">📋</div>
+                        <div class="card-content">
+                            <h3>คำขอที่รออนุมัติ</h3>
+                            <p class="card-number" id="pendingRequests">5</p>
+                            <span class="card-label">รายการ</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-card card-blue">
+                        <div class="card-icon">📚</div>
+                        <div class="card-content">
+                            <h3>โครงงานที่ดูแล</h3>
+                            <p class="card-number" id="totalProjects">12</p>
+                            <span class="card-label">โครงงาน</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-card card-green">
+                        <div class="card-icon">✅</div>
+                        <div class="card-content">
+                            <h3>ความก้าวหน้ารอตรวจ</h3>
+                            <p class="card-number" id="pendingProgress">8</p>
+                            <span class="card-label">รายการ</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-card card-purple">
+                        <div class="card-icon">📅</div>
+                        <div class="card-content">
+                            <h3>นัดหมายวันนี้</h3>
+                            <p class="card-number" id="todayAppointments">3</p>
+                            <span class="card-label">นัดหมาย</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="section-title">
+                    <h2>การดำเนินการด่วน</h2>
+                </div>
+
+                <!-- Pending Requests Table -->
+                <div class="info-card">
+                    <h3>📋 คำขอที่รออนุมัติ (ล่าสุด)</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>รหัสนักศึกษา</th>
+                                    <th>ชื่อ-นามสกุล</th>
+                                    <th>หัวข้อโครงงาน</th>
+                                    <th>ประเภท</th>
+                                    <th>วันที่ยื่น</th>
+                                    <th>การดำเนินการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>6806022610001</td>
+                                    <td>นายวิชัย เก่งกาจ</td>
+                                    <td>ระบบจัดการโครงงานออนไลน์</td>
+                                    <td><span class="badge badge-orange">เสนอหัวข้อ</span></td>
+                                    <td>05/10/2025</td>
+                                    <td>
+                                        <button class="btn-action btn-approve">อนุมัติ</button>
+                                        <button class="btn-action btn-view">ดูรายละเอียด</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6806022610002</td>
+                                    <td>นางสาวสมหญิง ใจดี</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6806022610003</td>
+                                    <td>นายวิชัย เก่งกาจ</td>
+                                    <td></td>
+                                    <td></span></td>
+                                    <td></td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="link-view-all">ดูทั้งหมด →</a>
+                    </div>
+                </div>
+
+                <!-- Progress Check -->
+                <div class="info-card" style="margin-top: 25px;">
+                    <h3>📈 ความก้าวหน้ารอตรวจ (ล่าสุด)</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>โครงงาน</th>
+                                    <th>สมาชิกกลุ่ม</th>
+                                    <th>ครั้งที่</th>
+                                    <th>วันที่ส่ง</th>
+                                    <th>การดำเนินการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ระบบจัดการโครงงานออนไลน์</td>
+                                    <td>นายสมชาย รักเรียน และคณะ</td>
+                                    <td>ครั้งที่ 3</td>
+                                    <td>05/10/2025</td>
+                                    <td>
+                                        <button class="btn-action btn-check">ตรวจสอบ</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>แอปพลิเคชันจัดการคลังสินค้า</td>
+                                    <td>นางสาวสมหญิง ใจดี และคณะ</td>
+                                    <td>ครั้งที่ 2</td>
+                                    <td>04/10/2025</td>
+                                    <td>
+                                        <button class="btn-action btn-check">ตรวจสอบ</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="link-view-all">ดูทั้งหมด →</a>
+                    </div>
+                </div>
+
+                <!-- Today's Appointments -->
+                <div class="info-card" style="margin-top: 25px;">
+                    <h3>📅 นัดหมายวันนี้</h3>
+                    <div class="appointment-list">
+                        <div class="appointment-item">
+                            <div class="appointment-time">09:00 - 10:00</div>
+                            <div class="appointment-details">
+                                <h4>ประชุมหารือโครงงาน</h4>
+                                <p>กลุ่ม: ระบบจัดการโครงงานออนไลน์</p>
+                                <p>📍 -</p>
+                            </div>
+                        </div>
+                        <div class="appointment-item">
+                            <div class="appointment-time">13:00 - 14:00</div>
+                            <div class="appointment-details">
+                                <h4>ตรวจความก้าวหน้าโครงงาน</h4>
+                                <p>กลุ่ม: -</p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="appointment-item">
+                            <div class="appointment-time">15:00 - 16:00</div>
+                            <div class="appointment-details">
+                                <h4>ปรึกษาปัญหาโครงงาน</h4>
+                                <p>กลุ่ม:-</p>
+                                <p>📍 -</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="link-view-all">ดูตารางทั้งหมด →</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

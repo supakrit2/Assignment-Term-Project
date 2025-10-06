@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการอาจารย์</title>
+    <link href="/css/style3.css" rel="stylesheet">
+</head>
+<body>
+     <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการนักศึกษา.html"><p>เสนอหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/เจ้าหน้าที่/จัดการอาจารย์.html"><p>ยื่นสอบหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการโครงงาน.html"><p>ความก้าวหน้าโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/รายงาน.html"><p>ยื่นสอบโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/9/90/KMUTNB_emblem.png" alt="KMUTNB Logo" class="header-logo">
+                    <h1 class="header-title">หน้าแรก - อาจารย์ที่ปรึกษา</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">👤</div>
+                    </div>
+                </div>
+            </header>
+            <!-- จัดการอาจารย์ -->
+                <div id="page-teachers" class="page-content">
+                    <div class="page-header">
+                        <h2 class="page-title">จัดการอาจารย์</h2>
+                        <button class="btn btn-primary">+ เพิ่มอาจารย์</button>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="ค้นหารหัสอาจารย์, ชื่อ-นามสกุล...">
+                        <button class="btn btn-search">🔍 ค้นหา</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>รหัสอาจารย์</th>
+                                    <th>ชื่อ-นามสกุล</th>
+                                    <th>สาขาวิชา</th>
+                                    <th>อีเมล</th>
+                                    <th>เบอร์โทร</th>
+                                    <th>จำนวนนักศึกษา</th>
+                                    <th>สถานะ</th>
+                                    <th>การดำเนินการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>T001</td>
+                                    <td>ผศ.ดร.สมศักดิ์ ใจดี</td>
+                                    <td>วิศวกรรมซอฟต์แวร์</td>
+                                    <td>somsak.j@kmutnb.ac.th</td>
+                                    <td>02-555-1234</td>
+                                    <td>15</td>
+                                    <td><span class="badge badge-success">ใช้งาน</span></td>
+                                    <td>
+                                        <button class="btn btn-edit">แก้ไข</button>
+                                        <button class="btn btn-delete">ลบ</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>T002</td>
+                                    <td>อ.สมหญิง รักการสอน</td>
+                                    <td>วิศวกรรมคอมพิวเตอร์</td>
+                                    <td>somying.r@kmutnb.ac.th</td>
+                                    <td>02-555-1235</td>
+                                    <td>12</td>
+                                    <td><span class="badge badge-success">ใช้งาน</span></td>
+                                    <td>
+                                        <button class="btn btn-edit">แก้ไข</button>
+                                        <button class="btn btn-delete">ลบ</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>T003</td>
+                                    <td>ดร.วิชัย เก่งการสอน</td>
+                                    <td>วิศวกรรมข้อมูล</td>
+                                    <td>wichai.k@kmutnb.ac.th</td>
+                                    <td>02-555-1236</td>
+                                    <td>10</td>
+                                    <td><span class="badge badge-success">ใช้งาน</span></td>
+                                    <td>
+                                        <button class="btn btn-edit">แก้ไข</button>
+                                        <button class="btn btn-delete">ลบ</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="btn btn-pagination">← ก่อนหน้า</button>
+                        <span class="pagination-info">หน้า 1 จาก 3</span>
+                        <button class="btn btn-pagination">ถัดไป →</button>
+                    </div>
+                </div>
+</body>
+</html>

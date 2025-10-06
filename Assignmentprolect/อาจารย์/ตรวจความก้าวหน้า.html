@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตรวจความก้าวหน้า</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>ให้ข้อเสนอแนะ</h2>
+                <span class="close" onclick="closeFeedbackModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="feedback-group">
+                    <label>ผลการตรวจ</label>
+                    <select id="resultSelect">
+                        <option value="approved">ผ่าน</option>
+                        <option value="revise">ต้องแก้ไข</option>
+                        <option value="rejected">ไม่ผ่าน</option>
+                    </select>
+                </div>
+                <div class="feedback-group">
+                    <label>ข้อเสนอแนะ</label>
+                    <textarea id="feedbackText" placeholder="กรุณาให้ข้อเสนอแนะ เช่น จุดที่ดี, จุดที่ควรปรับปรุง, คำแนะนำ..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-view" onclick="closeFeedbackModal()">ยกเลิก</button>
+                <button class="btn btn-check" onclick="submitFeedback()">บันทึกข้อเสนอแนะ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/แดชบอร์ด.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/คำขออนุมัติ.html"><p>คำขออนุมัติ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/โครงงานที่ดูแล.html"><p>โครงงานที่ดูแล</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/อาจารย์/ตรวจความก้าวหน้า.html"><p>ตรวจความก้าวหน้า</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/การอนุมัติสอบ.html"><p>อนุมัติการสอบ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตารางนัดเวลา.html"><p>ตารางนัดหมาย</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>ตรวจความก้าวหน้า</h1>
+                </div>
+                <div class="user-avatar">👤</div>
+            </div>
+
+            <div class="content-section">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label>ค้นหา</label>
+                        <input type="text" class="filter-input" placeholder="ชื่อโครงงาน, นักศึกษา..." id="searchInput">
+                    </div>
+                    <div class="filter-group">
+                        <label>สถานะ</label>
+                        <select class="filter-select" id="statusFilter">
+                            <option value="all">ทั้งหมด</option>
+                            <option value="pending">รอตรวจ</option>
+                            <option value="checked">ตรวจแล้ว</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>ครั้งที่</label>
+                        <select class="filter-select" id="roundFilter">
+                            <option value="all">ทั้งหมด</option>
+                            <option value="1">ครั้งที่ 1</option>
+                            <option value="2">ครั้งที่ 2</option>
+                            <option value="3">ครั้งที่ 3</option>
+                            <option value="4">ครั้งที่ 4</option>
+                        </select>
+                    </div>
+                    <button class="btn-filter" onclick="applyFilter()">ค้นหา</button>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <h3>รอตรวจทั้งหมด</h3>
+                        <div class="number">8</div>
+                    </div>
+                    <div class="stat-card" style="border-left-color: #10b981;">
+                        <h3>ตรวจแล้ว</h3>
+                        <div class="number">15</div>
+                    </div>
+                    <div class="stat-card" style="border-left-color: #f59e0b; background: linear-gradient(135deg, #fef3c7 0%, #ffffff 100%);">
+                        <h3>ต้องแก้ไข</h3>
+                        <div class="number" style="color: #f59e0b;">3</div>
+                    </div>
+                </div>
+
+                <div class="progress-list">
+                    <div class="progress-card">
+                        <div class="progress-header">
+                            <div class="progress-title">
+                                <h3>ระบบจัดการโครงงานออนไลน์</h3>
+                                <div class="progress-meta">
+                                    <span>ครั้งที่ 3</span>
+                                    <span>กลุ่ม: 3 คน</span>
+                                </div>
+                            </div>
+                            <span class="status-badge status-pending">รอตรวจ</span>
+                        </div>
+                        <div class="progress-body">
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <strong>หัวหน้ากลุ่ม</strong>
+                                    <span>นายสมชาย รักเรียน</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>สมาชิก</strong>
+                                    <span>นายสมชาย, นางสาวสมหญิง, นายวิชัย</span>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-item">
+                                    <strong>สิ่งที่ทำในครั้งนี้</strong>
+                                    <span>พัฒนาส่วน UI/UX ของระบบ, ออกแบบฐานข้อมูล</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-footer">
+                            <span class="date-info">ส่งเมื่อ: 05/10/2025 เวลา 14:30</span>
+                            <div class="action-buttons">
+                                <button class="btn btn-view" onclick="viewProgress(1)">ดูรายละเอียด</button>
+                                <button class="btn btn-check" onclick="checkProgress(1)">ตรวจสอบ</button>
+                                <button class="btn btn-feedback" onclick="openFeedbackModal(1)">ให้ข้อเสนอแนะ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+</body>
+</html>
