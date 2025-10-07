@@ -1,0 +1,143 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>คำขออนุมัติ</title>
+        <link rel="stylesheet" href="../css/style1.css">
+    </head>
+    <body>
+        <!-- Rejection Modal -->
+        <div id="rejectModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>✍️ เหตุผลในการไม่อนุมัติ</h2>
+                    <span class="close" onclick="closeRejectModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <textarea id="rejectReason" placeholder="กรุณาระบุเหตุผลในการไม่อนุมัติ เช่น ข้อมูลไม่ครบถ้วน, หัวข้อไม่เหมาะสม, ต้องปรับแก้..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-view" onclick="closeRejectModal()">ยกเลิก</button>
+                    <button class="btn btn-reject" onclick="confirmReject()">ยืนยันไม่อนุมัติ</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/แดชบอร์ด.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/อาจารย์/คำขออนุมัติ.html"><p>คำขออนุมัติ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/โครงงานที่ดูแล.html"><p>โครงงานที่ดูแล</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตรวจความก้าวหน้า.html"><p>ตรวจความก้าวหน้า</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/การอนุมัติสอบ.html"><p>อนุมัติการสอบ</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตารางนัดเวลา.html"><p>ตารางนัดหมาย</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/อาจารย์/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+            <main class="main-content">
+                <div class="header">
+                    <div class="header-left">
+                        <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                        <h1>คำขออนุมัติ</h1>
+                    </div>
+                    <div class="user-avatar">👤</div>
+                </div>
+
+                <div class="content-section">
+                    <!-- Filter Section -->
+                    <div class="filter-section">
+                        <div class="filter-group">
+                            <label>🔍 ค้นหา</label>
+                            <input type="text" class="filter-input" placeholder="รหัส, ชื่อ, หัวข้อ..." id="searchInput">
+                        </div>
+                        <div class="filter-group">
+                            <label>📑 ประเภทคำขอ</label>
+                            <select class="filter-select" id="typeFilter">
+                                <option value="all">ทั้งหมด</option>
+                                <option value="topic">เสนอหัวข้อ</option>
+                                <option value="proposal">ยื่นสอบหัวข้อ</option>
+                                <option value="final">ยื่นสอบโครงงาน</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>📊 สถานะ</label>
+                            <select class="filter-select" id="statusFilter">
+                                <option value="pending">รออนุมัติ</option>
+                                <option value="approved">อนุมัติแล้ว</option>
+                                <option value="rejected">ไม่อนุมัติ</option>
+                            </select>
+                        </div>
+                        <button class="btn-filter" onclick="applyFilter()">ค้นหา</button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <h3>⏳ รออนุมัติทั้งหมด</h3>
+                            <div class="number" id="totalPending">5</div>
+                        </div>
+                        <div class="stat-card" style="border-left-color: #10b981; background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);">
+                            <h3>✅ อนุมัติแล้ว</h3>
+                            <div class="number" style="color: #10b981;" id="totalApproved">23</div>
+                        </div>
+                        <div class="stat-card" style="border-left-color: #ef4444; background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);">
+                            <h3>❌ ไม่อนุมัติ</h3>
+                            <div class="number" style="color: #ef4444;" id="totalRejected">2</div>
+                        </div>
+                    </div>
+
+                    <!-- Request List -->
+                    <div class="request-list" id="requestList">
+                        <!-- Request Card 1 -->
+                        <div class="request-card">
+                            <div class="request-header">
+                                <div class="request-title">
+                                    <h3>ระบบจัดการโครงงานออนไลน์</h3>
+                                    <div class="request-meta">
+                                        <span>👤 รหัส: 6806022610001</span>
+                                        <span>👥 กลุ่ม: 3 คน</span>
+                                    </div>
+                                </div>
+                                <span class="request-type type-topic">เสนอหัวข้อ</span>
+                            </div>
+                            <div class="request-body">
+                                <div class="info-row">
+                                    <div class="info-item">
+                                        <strong>📅 วันสอบที่เสนอ</strong>
+                                        <span>20/10/2025 เวลา 09:00-12:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="request-footer">
+                                <span class="date-info">📅 ยื่นเมื่อ: 03/10/2025 เวลา 16:45</span>
+                                <div class="action-buttons">
+                                    <button class="btn btn-view" onclick="viewDetails(3)">ดูรายละเอียด</button>
+                                    <button class="btn btn-approve" onclick="approve(3)">✓ อนุมัติ</button>
+                                    <button class="btn btn-reject" onclick="openRejectModal(3)">✗ ไม่อนุมัติ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+</body>
+</html>

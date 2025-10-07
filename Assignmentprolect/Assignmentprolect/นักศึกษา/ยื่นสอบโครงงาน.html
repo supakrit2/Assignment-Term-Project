@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยื่นสอบโครงงาน - KMUTNB</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ศุภกฤต จีวิระ</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสนักศึกษา:</label>
+                    <p>6806022610xxx</p>
+                </div>
+                <div class="info-item">
+                    <label>สาขา:</label>
+                    <p>วิศวกรรมคอมพิวเตอร์</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>s6806022610xxx@email.kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>08953868xx</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/เสนอหัวข้อโครงงาน.html"><p>เสนอหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบหัวข้อโครงงาน.html"><p>ยื่นสอบหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ความก้าวหน้าโครงงาน.html"><p>ความก้าวหน้าโครงงาน</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/นักศึกษา/ยื่นสอบโครงงาน.html"><p>ยื่นสอบโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>ยื่นสอบโครงงาน</h1>
+                </div>
+                <div class="user-avatar" id="userAvatar">👤</div>
+            </div>
+
+            <div class="content-section">
+                <div class="page-title">
+                    <h2>📋 ยื่นเอกสารสอบโครงงาน</h2>
+                    <p>กรุณาอัพโหลดเอกสารที่จำเป็นสำหรับการสอบโครงงาน</p>
+                </div>
+
+                <div class="requirements-box">
+                    <h3>ข้อกำหนดการยื่นเอกสาร</h3>
+                    <ul>
+                        <li>ไฟล์เล่มโครงงานต้องเป็นรูปแบบ PDF ขนาดไม่เกิน 20 MB</li>
+                        <li>ไฟล์สไลด์นำเสนอต้องเป็นรูปแบบ PDF หรือ PowerPoint ขนาดไม่เกิน 10 MB</li>
+                        <li>ตรวจสอบความถูกต้องของเอกสารก่อนยื่น</li>
+                        <li>ยื่นเอกสารล่วงหน้าอย่างน้อย 7 วันก่อนวันสอบ</li>
+                    </ul>
+                </div>
+
+                <form id="uploadForm">
+                    <div class="upload-section">
+                        <div class="upload-item">
+                            <div class="upload-item-header">
+                                <div class="upload-icon">📄</div>
+                                <div class="upload-item-title">
+                                    <h3>เล่มโครงงาน</h3>
+                                    <p>อัพโหลดเอกสารเล่มโครงงานฉบับสมบูรณ์</p>
+                                </div>
+                            </div>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="projectBook" accept=".pdf">
+                                <button type="button" class="file-input-button">เลือกไฟล์เล่มโครงงาน</button>
+                            </div>
+                            <div id="fileName1" class="file-name"></div>
+                        </div>
+
+                        <div class="upload-item">
+                            <div class="upload-item-header">
+                                <div class="upload-icon">📊</div>
+                                <div class="upload-item-title">
+                                    <h3>สไลด์นำเสนอ</h3>
+                                    <p>อัพโหลดสไลด์สำหรับการนำเสนอโครงงาน</p>
+                                </div>
+                            </div>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="presentation" accept=".pdf,.ppt,.pptx">
+                                <button type="button" class="file-input-button">เลือกไฟล์สไลด์นำเสนอ</button>
+                            </div>
+                            <div id="fileName2" class="file-name"></div>
+                        </div>
+                    </div>
+                    <div class="upload-item">
+                        <div class="field">
+                            <label>อาจารย์ที่ปรึกษา :</label>
+                            <select class="select-box">
+                                <option value="">-- เลือกอาจารย์ที่ปรึกษา --</option>
+                                <option value="1">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                                <option value="2">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                                <option value="3">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                                <option value="4">ผศ.ดร.ขนิษฐา นามี</option>
+                                <option value="5">ผศ.จสต.นพเก้า ทองใบ</option>
+                                <option value="6">อ.ดร.กาญจน ณ ศรีธะ</option>
+                                <option value="7">ผศ.นพดล บูรณ์กุศล</option>
+                                <option value="8">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                                <option value="9">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                                <option value="10">ผศ.นิมิต ศรีคำทา</option>
+                                <option value="11">อ.ดร.พิทย์พิมล ชูรอด</option>
+                                <option value="12">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                                <option value="13">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                                <option value="14">ผศ.พีระศักดิ์ เสรีกุล</option>
+                                <option value="15">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                                <option value="16">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                                <option value="17">ผศ.สิวาลัย จินเจือ</option>
+                                <option value="18">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                                <option value="19">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                                <option value="20">อ.ดร.ศิรินทรา แว่วศรี</option>
+                                <option value="21">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                                <option value="22">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                                <option value="23">รศ.ดร.ยุพิน สรรพคุณ</option>
+                            </select>
+                        </div>
+                        
+                        <div class="field">
+                            <label>อาจารย์ที่ปรึกษา :</label>
+                            <select class="select-box">
+                                <option value="">-- เลือกอาจารย์ที่ปรึกษา --</option>
+                                <option value="1">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                                <option value="2">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                                <option value="3">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                                <option value="4">ผศ.ดร.ขนิษฐา นามี</option>
+                                <option value="5">ผศ.จสต.นพเก้า ทองใบ</option>
+                                <option value="6">อ.ดร.กาญจน ณ ศรีธะ</option>
+                                <option value="7">ผศ.นพดล บูรณ์กุศล</option>
+                                <option value="8">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                                <option value="9">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                                <option value="10">ผศ.นิมิต ศรีคำทา</option>
+                                <option value="11">อ.ดร.พิทย์พิมล ชูรอด</option>
+                                <option value="12">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                                <option value="13">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                                <option value="14">ผศ.พีระศักดิ์ เสรีกุล</option>
+                                <option value="15">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                                <option value="16">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                                <option value="17">ผศ.สิวาลัย จินเจือ</option>
+                                <option value="18">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                                <option value="19">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                                <option value="20">อ.ดร.ศิรินทรา แว่วศรี</option>
+                                <option value="21">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                                <option value="22">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                                <option value="23">รศ.ดร.ยุพิน สรรพคุณ</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>อาจารย์ที่ปรึกษา :</label>
+                            <select class="select-box">
+                                <option value="">-- เลือกอาจารย์ที่ปรึกษา --</option>
+                                <option value="1">รศ.ดร.อนิราช มิ่งขวัญ</option>
+                                <option value="2">ผศ.อรบุษป์ วุฒิกมลชัย</option>
+                                <option value="3">ผศ.ดร.บีสุดา ดาวเรือง</option>
+                                <option value="4">ผศ.ดร.ขนิษฐา นามี</option>
+                                <option value="5">ผศ.จสต.นพเก้า ทองใบ</option>
+                                <option value="6">อ.ดร.กาญจน ณ ศรีธะ</option>
+                                <option value="7">ผศ.นพดล บูรณ์กุศล</option>
+                                <option value="8">ผศ.ดร.นิติการ นาคเจือทอง</option>
+                                <option value="9">ผศ.ดร.นัฎฐพันธ์ นาคพงษ์</option>
+                                <option value="10">ผศ.นิมิต ศรีคำทา</option>
+                                <option value="11">อ.ดร.พิทย์พิมล ชูรอด</option>
+                                <option value="12">ผศ.ดร.พาฝัน ดวงไพศาล</option>
+                                <option value="13">อ.ดร.ประดิษฐ์ พิทักษ์เสถียรกุล</option>
+                                <option value="14">ผศ.พีระศักดิ์ เสรีกุล</option>
+                                <option value="15">ผศ.สมชัย เชียงพงศ์พันธุ์</option>
+                                <option value="16">ผศ.ดร.สุปีติ กุลจันทร์</option>
+                                <option value="17">ผศ.สิวาลัย จินเจือ</option>
+                                <option value="18">ผศ.ดร.สุพาภรณ์ ซิ้มเจริญ</option>
+                                <option value="19">ผศ.ดร.ศรายุทธ ธเนศสกุลวัฒนา</option>
+                                <option value="20">อ.ดร.ศิรินทรา แว่วศรี</option>
+                                <option value="21">อ.ดร.วัชรชัย คงศิริวัฒนา</option>
+                                <option value="22">ผศ.ดร.วันทนี ประจวบศุภกิจ</option>
+                                <option value="23">รศ.ดร.ยุพิน สรรพคุณ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="submit-container">
+                        <button type="submit" class="submit-button" id="submitBtn" disabled>ส่งข้อมูล</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Modal functionality
+        const userAvatar = document.getElementById('userAvatar');
+        const profileModal = document.getElementById('profileModal');
+        const closeBtn = document.querySelector('.close');
+        const btnLogout = document.querySelector('.btn-logout');
+        const btnEdit = document.querySelector('.btn-edit');
+
+        function openModal() {
+            profileModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            profileModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        userAvatar.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(event) {
+            if (event.target === profileModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && profileModal.style.display === 'block') {
+                closeModal();
+            }
+        });
+
+        btnLogout.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
+                alert('ออกจากระบบสำเร็จ');
+                closeModal();
+            }
+        });
+
+        btnEdit.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('เปิดหน้าแก้ไขข้อมูล');
+            closeModal();
+        });
+
+        // File upload functionality
+        const projectBookInput = document.getElementById('projectBook');
+        const presentationInput = document.getElementById('presentation');
+        const fileName1 = document.getElementById('fileName1');
+        const fileName2 = document.getElementById('fileName2');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function updateFileName(input, displayElement) {
+            if (input.files.length > 0) {
+                const fileName = input.files[0].name;
+                const fileSize = (input.files[0].size / 1024 / 1024).toFixed(2);
+                displayElement.innerHTML = `✓ ${fileName} (${fileSize} MB)`;
+                displayElement.classList.add('active');
+            } else {
+                displayElement.innerHTML = '';
+                displayElement.classList.remove('active');
+            }
+            checkFormComplete();
+        }
+
+        function checkFormComplete() {
+            if (projectBookInput.files.length > 0 && presentationInput.files.length > 0) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        projectBookInput.addEventListener('change', function() {
+            updateFileName(this, fileName1);
+        });
+
+        presentationInput.addEventListener('change', function() {
+            updateFileName(this, fileName2);
+        });
+
+        // Form submission
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (confirm('คุณต้องการส่งเอกสารยื่นสอบโครงงานหรือไม่?')) {
+                alert('✓ ส่งเอกสารสำเร็จ!\n\nเอกสารของคุณได้รับการบันทึกแล้ว\nกรุณารอการแจ้งเตือนจากระบบ');
+                
+                // Reset form
+                this.reset();
+                fileName1.innerHTML = '';
+                fileName1.classList.remove('active');
+                fileName2.innerHTML = '';
+                fileName2.classList.remove('active');
+                submitBtn.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>

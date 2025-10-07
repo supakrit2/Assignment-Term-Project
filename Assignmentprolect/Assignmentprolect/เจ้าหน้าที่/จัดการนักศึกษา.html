@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMUTNB - จัดการอาจารย์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/css/style3.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/เจ้าหน้าที่/จัดการนักศึกษา.html"><p>จัดการนักศึกษา</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการอาจารย์.html"><p>จัดการอาจารย์</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการโครงงาน.html"><p>จัดการโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/รายงาน.html"><p>รายงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo-badge">
+                        <img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto">
+                    </div>
+                    <h1 class="header-title">จัดการนักศึกษา</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">👤</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="content">
+                <div class="page-header">
+                    <h2 class="page-title">จัดการนักศึกษา</h2>
+                    <button class="btn btn-primary">+ เพิ่มนักศึกษา</button>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="ค้นหารหัสอาจารย์, ชื่อ-นามสกุล...">
+                    <button class="btn btn-search">🔍 ค้นหา</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>รหัสนักศึกษา</th>
+                                <th>ชื่อ-นามสกุล</th>
+                                <th>สาขาวิชา</th>
+                                <th>อีเมล</th>
+                                <th>เบอร์โทร</th>
+                                <th></th> 
+                                <th>สถานะ</th>
+                                <th>การดำเนินการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>T001</td>
+                                <td>นศ.แมนยู ไม่มีถ้วย</td>
+                                <td>วิศวกรรมซอฟต์แวร์</td>
+                                <td>mantood.j@kmutnb.ac.th</td>
+                                <td>02-555-1234</td>
+                                <td></td>
+                                <td><span class="badge badge-success">ใช้งาน</span></td>
+                                <td>
+                                    <button class="btn btn-edit">แก้ไข</button>
+                                    <button class="btn btn-delete">ลบ</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>T002</td>
+                                <td>นศ.ลิเวอพูล ได้ถ้วย</td>
+                                <td>วิศวกรรมคอมพิวเตอร์</td>
+                                <td>leverking.r@kmutnb.ac.th</td>
+                                <td>02-555-1235</td>
+                                <td></td>
+                                <td><span class="badge badge-success">ใช้งาน</span></td>
+                                <td>
+                                    <button class="btn btn-edit">แก้ไข</button>
+                                    <button class="btn btn-delete">ลบ</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>T003</td>
+                                <td>นศ.หม่อมหลวงปวรรุจ จุฑาเทพ</td>
+                                <td>วิศวกรรมข้อมูล</td>
+                                <td>pava@kmutnb.ac.th</td>
+                                <td>02-555-1236</td>
+                                <td></td>
+                                <td><span class="badge badge-success">ใช้งาน</span></td>
+                                <td>
+                                    <button class="btn btn-edit">แก้ไข</button>
+                                    <button class="btn btn-delete">ลบ</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn btn-pagination">← ก่อนหน้า</button>
+                    <span class="pagination-info">หน้า 1 จาก 3</span>
+                    <button class="btn btn-pagination">ถัดไป →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

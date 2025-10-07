@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - KMUTNB</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ศุภกฤต จีวิระ</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสนักศึกษา:</label>
+                    <p>6806022610xxx</p>
+                </div>
+                <div class="info-item">
+                    <label>สาขา:</label>
+                    <p>วิศวกรรมคอมพิวเตอร์</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>s6806022610xxx@email.kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>08953868xx</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item active">
+                <a href="/นักศึกษา/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/เสนอหัวข้อโครงงาน.html"><p>เสนอหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบหัวข้อโครงงาน.html"><p>ยื่นสอบหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ความก้าวหน้าโครงงาน.html"><p>ความก้าวหน้าโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบโครงงาน.html"><p>ยื่นสอบโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>หน้าแรก</h1>
+                </div>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <button class="add-btn" onclick="window.location.href='../นักศึกษา/เสนอหัวข้อโครงงาน.html'">
+                        + เสนอหัวข้อโครงงาน
+                    </button>
+                    <div class="user-avatar" id="userAvatar">👤</div>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <div class="field">
+                    <label>โครงงาน :</label>
+                    <input type="text" placeholder="ยังไม่มีโครงงาน" readonly>
+                </div>
+
+                <div class="field">
+                    <label>อาจารย์ที่ปรึกษา:</label>
+                    <input type="text" placeholder="ยังไม่ได้เลือกอาจารย์ที่ปรึกษา" readonly>
+                </div>
+                <div class="field">
+                    <label>ชื่อสมาชิก :</label>
+                    <input type="text" placeholder="สมาชิกคนที่ 1"><br>
+                    <br>
+                    <input type="text" placeholder="สมาชิกคนที่ 2"><br>
+                    <br>
+                    <input type="text" placeholder="สมาชิกคนที่ 3"><br>
+                </div>
+                <br>
+                 <div class="field">
+                    <label>ความคืบหน้า :</label>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+                <br>
+                <div class="field">
+                    <label>สถานะการสอบหัวข้อโครงงาน :</label>
+                    <div class="status-container">
+                        <span class="status-badge" id="topicStatus">🕒รอการสอบ</span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>สถานะการยื่นสอบโครงงาน :</label>
+                    <div class="status-container">
+                        <span class="status-badge status-waiting" id="projectStatus">ยังไม่สามารถยื่นสอบได้</span>
+                    </div>
+                </div>
+                
+
+                <div class="action-buttons">
+                    <button class="btn btn-calendar" onclick="window.location.href='../นักศึกษา/ความก้าวหน้าโครงงาน.html'">
+                        ส่งความก้าวหน้า
+                    </button>
+                    <button class="btn btn-submit" onclick="window.location.href='../นักศึกษา/ยื่นสอบโครงงาน.html'">
+                        ยื่นสอบโครงงาน
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize elements
+        const userAvatar = document.getElementById('userAvatar');
+        const profileModal = document.getElementById('profileModal');
+        const closeBtn = document.querySelector('.close');
+        const btnLogout = document.querySelector('.btn-logout');
+        const btnEdit = document.querySelector('.btn-edit');
+
+        // Prevent double-click selection
+        document.addEventListener('selectstart', function(e) {
+            if (e.target.classList.contains('user-avatar') || 
+                e.target.classList.contains('close') ||
+                e.target.tagName === 'BUTTON') {
+                e.preventDefault();
+            }
+        });
+
+        // Open modal function
+        function openModal() {
+            profileModal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Close modal function
+        function closeModal() {
+            profileModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Open modal when click avatar
+        if (userAvatar) {
+            userAvatar.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openModal();
+            });
+        }
+
+        // Close modal when click X
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeModal();
+            });
+        }
+
+        // Close modal when click outside
+        window.addEventListener('click', function(event) {
+            if (event.target === profileModal) {
+                closeModal();
+            }
+        });
+
+        // Prevent modal content clicks from closing modal
+        const modalContent = document.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && profileModal.style.display === 'block') {
+                closeModal();
+            }
+        });
+
+        // Logout button with debounce
+        let isLoggingOut = false;
+        if (btnLogout) {
+            btnLogout.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isLoggingOut) return;
+                isLoggingOut = true;
+                
+                if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
+                    alert('ออกจากระบบสำเร็จ');
+                    closeModal();
+                    // Redirect to login page if needed
+                    // window.location.href = '../login.html';
+                }
+                
+                setTimeout(() => {
+                    isLoggingOut = false;
+                }, 500);
+            });
+        }
+
+        // Edit button with debounce
+        let isEditing = false;
+        if (btnEdit) {
+            btnEdit.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isEditing) return;
+                isEditing = true;
+                
+                alert('เปิดหน้าแก้ไขข้อมูล');
+                closeModal();
+                // Redirect to edit page if needed
+                // window.location.href = '../นักศึกษา/แก้ไขข้อมูล.html';
+                
+                setTimeout(() => {
+                    isEditing = false;
+                }, 500);
+            });
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

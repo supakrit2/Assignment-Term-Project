@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMUTNB - ตั้งค่า</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/css/style3.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการนักศึกษา.html"><p>จัดการนักศึกษา</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการอาจารย์.html"><p>จัดการอาจารย์</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการโครงงาน.html"><p>จัดการโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/รายงาน.html"><p>รายงาน</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/เจ้าหน้าที่/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo-badge">
+                        <img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto">
+                    </div>
+                    <h1 class="header-title">ตั้งค่าระบบ</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">👤</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="content">
+                <div class="page-header">
+                    <h2 class="page-title">ตั้งค่าระบบ</h2>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3 class="settings-title">ข้อมูลส่วนตัว</h3>
+                        <div class="form-group">
+                            <label class="form-label">ชื่อ-นามสกุล</label>
+                            <input type="text" class="form-input" value="เจ้าหน้าที่ระบบ" placeholder="ชื่อ-นามสกุล">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">อีเมล</label>
+                            <input type="email" class="form-input" value="admin@kmutnb.ac.th" placeholder="อีเมล">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">เบอร์โทรศัพท์</label>
+                            <input type="tel" class="form-input" value="02-555-2000" placeholder="เบอร์โทรศัพท์">
+                        </div>
+                        <button class="btn btn-primary">บันทึกข้อมูล</button>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-title">เปลี่ยนรหัสผ่าน</h3>
+                        <div class="form-group">
+                            <label class="form-label">รหัสผ่านเดิม</label>
+                            <input type="password" class="form-input" placeholder="รหัสผ่านเดิม">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">รหัสผ่านใหม่</label>
+                            <input type="password" class="form-input" placeholder="รหัสผ่านใหม่">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ยืนยันรหัสผ่านใหม่</label>
+                            <input type="password" class="form-input" placeholder="ยืนยันรหัสผ่านใหม่">
+                        </div>
+                        <button class="btn btn-primary">เปลี่ยนรหัสผ่าน</button>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-title">การแจ้งเตือน</h3>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>แจ้งเตือนคำขออนุมัติใหม่</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                <span>แจ้งเตือนความก้าวหน้าโครงงาน</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                <span>แจ้งเตือนทางอีเมล</span>
+                            </label>
+                        </div>
+                        <button class="btn btn-primary">บันทึกการตั้งค่า</button>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-title">การตั้งค่าระบบ</h3>
+                        <div class="form-group">
+                            <label class="form-label">ปีการศึกษา</label>
+                            <select class="form-input">
+                                <option>2567</option>
+                                <option selected>2568</option>
+                                <option>2569</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ภาคการศึกษา</label>
+                            <select class="form-input">
+                                <option selected>1</option>
+                                <option>2</option>
+                                <option>3 (ฤดูร้อน)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">จำนวนนักศึกษาสูงสุดต่ออาจารย์</label>
+                            <input type="number" class="form-input" value="20">
+                        </div>
+                        <button class="btn btn-primary">บันทึกการตั้งค่า</button>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3 class="settings-title">การจัดการข้อมูล</h3>
+                        <div class="form-group">
+                            <label class="form-label">สำรองข้อมูล</label>
+                            <button class="btn btn-secondary">📥 สำรองข้อมูลระบบ</button>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">นำเข้าข้อมูล</label>
+                            <input type="file" class="form-input">
+                            <button class="btn btn-secondary">📤 นำเข้าข้อมูล</button>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ส่งออกรายงาน</label>
+                            <select class="form-input">
+                                <option>Excel (.xlsx)</option>
+                                <option>PDF (.pdf)</option>
+                                <option>CSV (.csv)</option>
+                            </select>
+                            <button class="btn btn-secondary">💾 ส่งออกข้อมูล</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section danger-zone">
+                        <h3 class="settings-title">โซนอันตราย</h3>
+                        <div class="form-group">
+                            <label class="form-label">ล้างข้อมูลทั้งหมด</label>
+                            <p class="text-warning">⚠️ การดำเนินการนี้จะไม่สามารถย้อนกลับได้</p>
+                            <button class="btn btn-danger">🗑️ ล้างข้อมูลทั้งหมด</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

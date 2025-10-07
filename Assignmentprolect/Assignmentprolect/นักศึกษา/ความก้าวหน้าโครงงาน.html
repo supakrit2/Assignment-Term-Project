@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความก้าวหน้าโครงงาน - KMUTNB</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ศุภกฤต จีวิระ</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสนักศึกษา:</label>
+                    <p>6806022610xxx</p>
+                </div>
+                <div class="info-item">
+                    <label>สาขา:</label>
+                    <p>วิศวกรรมคอมพิวเตอร์</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>s6806022610xxx@email.kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>08953868xx</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/เสนอหัวข้อโครงงาน.html"><p>เสนอหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบหัวข้อโครงงาน.html"><p>ยื่นสอบหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/นักศึกษา/ความก้าวหน้าโครงงาน.html"><p>ความก้าวหน้าโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบโครงงาน.html"><p>ยื่นสอบโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>ความก้าวหน้าโครงงาน</h1>
+                </div>
+                <div class="user-avatar" id="userAvatar">👤</div>
+            </div>
+
+            <div class="content-section">
+                <form id="upload-form">
+                    <div class="grid-container">
+                        <div class="upload-box">
+                            <h3>สัปดาห์ที่ 1</h3>
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบสรุปภาพ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="summary1" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-1a')">
+                                    <label for="summary1" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-1a">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบถอดความ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="document1" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-1b')">
+                                    <label for="document1" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-1b">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+                        </div>
+
+                        <div class="upload-box">
+                            <h3>สัปดาห์ที่ 2</h3>
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบสรุปภาพ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="summary2" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-2a')">
+                                    <label for="summary2" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-2a">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบถอดความ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="document2" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-2b')">
+                                    <label for="document2" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-2b">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+                        </div>
+
+                        <div class="upload-box">
+                            <h3>สัปดาห์ที่ 3</h3>
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบสรุปภาพ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="summary3" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-3a')">
+                                    <label for="summary3" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-3a">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบถอดความ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="document3" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-3b')">
+                                    <label for="document3" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-3b">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+                        </div>
+
+                        <div class="upload-box">
+                            <h3>สัปดาห์ที่ 4</h3>
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบสรุปภาพ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="summary4" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-4a')">
+                                    <label for="summary4" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-4a">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+
+                            <div class="file-input-group">
+                                <label>อัพโหลดใบถอดความ<span class="required">*</span></label>
+                                <div class="file-input-wrapper">
+                                    <input type="file" id="document4" accept="image/*,.pdf" onchange="updateFileName(this, 'file-name-4b')">
+                                    <label for="document4" class="file-input-button">เลือกไฟล์</label>
+                                </div>
+                                <div class="file-name" id="file-name-4b">ยังไม่ได้เลือกไฟล์</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-container">
+                        <button type="submit" class="submit-button">ส่งข้อมูล</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const userAvatar = document.getElementById('userAvatar');
+        const profileModal = document.getElementById('profileModal');
+        const closeBtn = document.querySelector('.close');
+        const btnLogout = document.querySelector('.btn-logout');
+        const btnEdit = document.querySelector('.btn-edit');
+
+        document.addEventListener('selectstart', function(e) {
+            if (e.target.classList.contains('user-avatar') || 
+                e.target.classList.contains('close') ||
+                e.target.tagName === 'BUTTON') {
+                e.preventDefault();
+            }
+        });
+
+        function openModal() {
+            profileModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            profileModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        if (userAvatar) {
+            userAvatar.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openModal();
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeModal();
+            });
+        }
+
+        window.addEventListener('click', function(event) {
+            if (event.target === profileModal) {
+                closeModal();
+            }
+        });
+
+        const modalContent = document.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && profileModal.style.display === 'block') {
+                closeModal();
+            }
+        });
+
+        let isLoggingOut = false;
+        if (btnLogout) {
+            btnLogout.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isLoggingOut) return;
+                isLoggingOut = true;
+                
+                if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
+                    alert('ออกจากระบบสำเร็จ');
+                    closeModal();
+                }
+                
+                setTimeout(() => {
+                    isLoggingOut = false;
+                }, 500);
+            });
+        }
+
+        let isEditing = false;
+        if (btnEdit) {
+            btnEdit.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (isEditing) return;
+                isEditing = true;
+                
+                alert('เปิดหน้าแก้ไขข้อมูล');
+                closeModal();
+                
+                setTimeout(() => {
+                    isEditing = false;
+                }, 500);
+            });
+        }
+
+        function updateFileName(input, displayId) {
+            const display = document.getElementById(displayId);
+            if (input.files && input.files[0]) {
+                const fileName = input.files[0].name;
+                display.textContent = fileName;
+                display.classList.add('selected');
+            } else {
+                display.textContent = 'ยังไม่ได้เลือกไฟล์';
+                display.classList.remove('selected');
+            }
+        }
+
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fileInputs = [
+                'summary1', 'document1',
+                'summary2', 'document2',
+                'summary3', 'document3',
+                'summary4', 'document4'
+            ];
+            
+            let allFilled = true;
+            const missing = [];
+            
+            fileInputs.forEach((id, index) => {
+                const input = document.getElementById(id);
+                if (!input.files || !input.files[0]) {
+                    allFilled = false;
+                    const week = Math.floor(index / 2) + 1;
+                    const type = index % 2 === 0 ? 'สรุปภาพ' : 'ถอดความ';
+                    missing.push(`สัปดาห์ที่ ${week} - ${type}`);
+                }
+            });
+            
+            if (!allFilled) {
+                alert('กรุณาอัพโหลดไฟล์ให้ครบถ้วน\n\nขาดไฟล์:\n' + missing.join('\n'));
+                return;
+            }
+            
+            if (confirm('คุณต้องการส่งข้อมูลความก้าวหน้าโครงงานหรือไม่?')) {
+                alert('ส่งข้อมูลสำเร็จ!\nรอการตรวจสอบจากอาจารย์ที่ปรึกษา');
+                this.reset();
+                
+                document.querySelectorAll('.file-name').forEach(el => {
+                    el.textContent = 'ยังไม่ได้เลือกไฟล์';
+                    el.classList.remove('selected');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

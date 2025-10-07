@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกเปิดบัญชีเข้าใช้งาน - KMUTNB</title>
+    <link href="/css/style4.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="seal">🏛️</div>
+        </div>
+
+        <h1 class="title">เลือกเปิดบัญชีเข้าใช้งาน</h1>
+
+        <div class="accounts-container">
+            <!-- นักศึกษา -->
+            <div class="account-card">
+                <div class="icon-wrapper student">
+                    🎓
+                </div>
+                <div class="account-title">นักศึกษา</div>
+                <div class="account-subtitle">สำหรับนักศึกษา</div>
+                <button class="login-btn" onclick="alert('เข้าสู่ระบบนักศึกษา')">เปิดใช้งาน</button>
+            </div>
+
+            <!-- อาจารย์ -->
+            <div class="account-card">
+                <div class="icon-wrapper teacher">
+                    👨‍🏫
+                </div>
+                <div class="account-title">อาจารย์</div>
+                <div class="account-subtitle">สำหรับอาจารย์</div>
+                <button class="login-btn orange" onclick="alert('เข้าสู่ระบบอาจารย์')">เปิดใช้งาน</button>
+            </div>
+
+            <!-- บุคลากร -->
+            <div class="account-card">
+                <div class="icon-wrapper staff">
+                    👔
+                </div>
+                <div class="account-title">เจ้าหน้าที่</div>
+                <div class="account-subtitle">สำหรับบุคลากรองค์กรภายนอก</div>
+                <button class="login-btn blue" onclick="alert('เข้าสู่ระบบบุคลากร')">เปิดใช้งาน</button>
+            </div>
+        </div>
+
+        <button class="guest-btn" onclick="alert('เข้าชมในฐานะผู้เข้าชม')">ลงชื่อเข้าใช้</button>
+    </div>
+</body>
+</html>

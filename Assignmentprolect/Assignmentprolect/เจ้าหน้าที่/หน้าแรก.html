@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMUTNB - หน้าแรก</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/css/style3.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item active">
+                <a href="/เจ้าหน้าที่/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการนักศึกษา.html"><p>จัดการนักศึกษา</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการอาจารย์.html"><p>จัดการอาจารย์</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการโครงงาน.html"><p>จัดการโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/รายงาน.html"><p>รายงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo-badge">
+                        <img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto">
+                    </div>
+                    <h1 class="header-title">หน้าแรก</h1>
+                <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ศุภกฤต จีวิระ</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสนักศึกษา:</label>
+                    <p>6806022610xxx</p>
+                </div>
+                <div class="info-item">
+                    <label>สาขา:</label>
+                    <p>วิศวกรรมคอมพิวเตอร์</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>s6806022610xxx@email.kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>08953868xx</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="content">
+                <!-- Dashboard Cards -->
+                <div class="dashboard-cards">
+                    <div class="card card-orange">
+                        <div class="card-icon">📋</div>
+                        <div class="card-content">
+                            <div class="card-title">คำขอที่รออนุมัติ</div>
+                            <div class="card-number">5</div>
+                            <div class="card-subtitle">รายการ</div>
+                        </div>
+                    </div>
+
+                    <div class="card card-blue">
+                        <div class="card-icon">📚</div>
+                        <div class="card-content">
+                            <div class="card-title">โครงงานทั้งหมด</div>
+                            <div class="card-number">12</div>
+                            <div class="card-subtitle">โครงงาน</div>
+                        </div>
+                    </div>
+
+                    <div class="card card-green">
+                        <div class="card-icon">✅</div>
+                        <div class="card-content">
+                            <div class="card-title">ความก้าวหน้าอนุมัติแล้ว</div>
+                            <div class="card-number">8</div>
+                            <div class="card-subtitle">รายการ</div>
+                        </div>
+                    </div>
+
+                    <div class="card card-purple">
+                        <div class="card-icon">📅</div>
+                        <div class="card-content">
+                            <div class="card-title">นัดหมายวันนี้</div>
+                            <div class="card-number">3</div>
+                            <div class="card-subtitle">นัดหมาย</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- คำขอที่รออนุมัติ -->
+                <section class="section">
+                    <h2 class="section-title">การดำเนินการค้าง</h2>
+                    
+                    <div class="table-container">
+                        <h3 class="table-heading">📋 คำขอที่รออนุมัติ (ค้าง)</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>รหัสนักศึกษา</th>
+                                    <th>ชื่อ-นามสกุล</th>
+                                    <th>หัวข้อโครงงาน</th>
+                                    <th>ประเภท</th>
+                                    <th>วันที่ยื่น</th>
+                                    <th>การดำเนินการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>6806022610001</td>
+                                    <td>นายวิชัย แก่งการ</td>
+                                    <td>ระบบจัดการโครงงานออนไลน์</td>
+                                    <td><span class="badge badge-warning">เสนอหัวข้อ</span></td>
+                                    <td>05/10/2025</td>
+                                    <td>
+                                        <button class="btn btn-approve">อนุมัติ</button>
+                                        <button class="btn btn-detail">ดูรายละเอียด</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6806022610002</td>
+                                    <td>นางสาวสมหญิง ใจดี</td>
+                                    <td>แอปพลิเคชันจัดการคลังสินค้า</td>
+                                    <td><span class="badge badge-info">ความก้าวหน้า</span></td>
+                                    <td>04/10/2025</td>
+                                    <td>
+                                        <button class="btn btn-approve">อนุมัติ</button>
+                                        <button class="btn btn-detail">ดูรายละเอียด</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6806022610003</td>
+                                    <td>นายวิชัย แก่งการ</td>
+                                    <td>ระบบจองห้องประชุมออนไลน์</td>
+                                    <td><span class="badge badge-warning">เสนอหัวข้อ</span></td>
+                                    <td>03/10/2025</td>
+                                    <td>
+                                        <button class="btn btn-approve">อนุมัติ</button>
+                                        <button class="btn btn-detail">ดูรายละเอียด</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-container">
+                        <h3 class="table-heading">📝 ความก้าวหน้าโครงงาน (ค้าง)</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>โครงงาน</th>
+                                    <th>สมาชิกกลุ่ม</th>
+                                    <th>ครั้งที่</th>
+                                    <th>วันที่ส่ง</th>
+                                    <th>การดำเนินการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ระบบจัดการโครงงานออนไลน์</td>
+                                    <td>นายวิชัย แก่งการ, นางสาวสมหญิง ใจดี</td>
+                                    <td>ครั้งที่ 1</td>
+                                    <td>05/10/2025</td>
+                                    <td>
+                                        <button class="btn btn-approve">อนุมัติ</button>
+                                        <button class="btn btn-detail">ดูรายละเอียด</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>แอปพลิเคชันจัดการคลังสินค้า</td>
+                                    <td>นายสมชาย ดีงาม</td>
+                                    <td>ครั้งที่ 2</td>
+                                    <td>04/10/2025</td>
+                                    <td>
+                                        <button class="btn btn-approve">อนุมัติ</button>
+                                        <button class="btn btn-detail">ดูรายละเอียด</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="link-more">
+                        <a href="#" class="link-text">ดูเพิ่มเติม →</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

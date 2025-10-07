@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตั้งค่า - KMUTNB</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="profile-header">
+                <div class="profile-avatar-modal">👤</div>
+                <h2>ข้อมูลโปรไฟล์</h2>
+            </div>
+            <div class="profile-info">
+                <div class="info-item">
+                    <label>ชื่อ-นามสกุล:</label>
+                    <p>ศุภกฤต จีวิระ</p>
+                </div>
+                <div class="info-item">
+                    <label>รหัสนักศึกษา:</label>
+                    <p>6806022610xxx</p>
+                </div>
+                <div class="info-item">
+                    <label>สาขา:</label>
+                    <p>วิศวกรรมคอมพิวเตอร์</p>
+                </div>
+                <div class="info-item">
+                    <label>อีเมล:</label>
+                    <p>s6806022610xxx@email.kmutnb.ac.th</p>
+                </div>
+                <div class="info-item">
+                    <label>เบอร์โทรศัพท์:</label>
+                    <p>08953868xx</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-edit">แก้ไขข้อมูล</button>
+                <button class="btn-logout">ออกจากระบบ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/เสนอหัวข้อโครงงาน.html"><p>เสนอหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบหัวข้อโครงงาน.html"><p>ยื่นสอบหัวข้อโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ความก้าวหน้าโครงงาน.html"><p>ความก้าวหน้าโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/นักศึกษา/ยื่นสอบโครงงาน.html"><p>ยื่นสอบโครงงาน</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/นักศึกษา/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo-badge"><img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto"></div>
+                    <h1>ตั้งค่า</h1>
+                </div>
+                <div class="user-avatar" id="userAvatar">👤</div>
+            </div>
+
+            <div class="settings-container">
+                <!-- Profile Settings Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div class="card-icon">👤</div>
+                        <h2>ข้อมูลส่วนตัว</h2>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="profile-avatar-section">
+                            <div class="large-avatar">👤</div>
+                            <div class="avatar-buttons">
+                                <button class="btn-avatar btn-change">เปลี่ยนรูปโปรไฟล์</button>
+                                <button class="btn-avatar btn-remove">ลบรูปภาพ</button>
+                            </div>
+                        </div>
+
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>ชื่อ</label>
+                                    <input type="text" value="ศุภกฤต" placeholder="กรอกชื่อ">
+                                </div>
+                                <div class="form-group">
+                                    <label>นามสกุล</label>
+                                    <input type="text" value="จีวิระ" placeholder="กรอกนามสกุล">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>รหัสนักศึกษา</label>
+                                <input type="text" value="6806022610xxx" disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label>สาขาวิชา</label>
+                                <input type="text" value="วิศวกรรมคอมพิวเตอร์" disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label>อีเมล</label>
+                                <input type="email" value="s6806022610xxx@email.kmutnb.ac.th">
+                            </div>
+
+                            <div class="form-group">
+                                <label>เบอร์โทรศัพท์</label>
+                                <input type="tel" value="08953868xx" placeholder="กรอกเบอร์โทรศัพท์">
+                            </div>
+
+                            <div class="save-button-container">
+                                <button type="button" class="btn-save" onclick="saveProfile()">บันทึกข้อมูล</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Security Settings Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔒</div>
+                        <h2>ความปลอดภัย</h2>
+                    </div>
+
+                    <div class="form-group">
+                        <label>รหัสผ่านปัจจุบัน</label>
+                        <input type="password" placeholder="กรอกรหัสผ่านปัจจุบัน">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>รหัสผ่านใหม่</label>
+                            <input type="password" placeholder="กรอกรหัสผ่านใหม่">
+                        </div>
+                        <div class="form-group">
+                            <label>ยืนยันรหัสผ่านใหม่</label>
+                            <input type="password" placeholder="กรอกรหัสผ่านใหม่อีกครั้ง">
+                        </div>
+                    </div>
+
+                    <div class="save-button-container">
+                        <button type="button" class="btn-save" onclick="changePassword()">เปลี่ยนรหัสผ่าน</button>
+                    </div>
+                </div>
+
+                <!-- Notification Settings Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔔</div>
+                        <h2>การแจ้งเตือน</h2>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>การแจ้งเตือนทางอีเมล</h3>
+                            <p>รับการแจ้งเตือนเกี่ยวกับโครงงานทางอีเมล</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>แจ้งเตือนความคืบหน้า</h3>
+                            <p>รับการแจ้งเตือนเมื่อมีการอัพเดทความคืบหน้า</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>แจ้งเตือนกำหนดส่ง</h3>
+                            <p>รับการแจ้งเตือนเมื่อใกล้ถึงกำหนดส่งงาน</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>แจ้งเตือนคอมเมนต์</h3>
+                            <p>รับการแจ้งเตือนเมื่อมีคอมเมนต์จากอาจารย์</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Appearance Settings Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div class="card-icon">🎨</div>
+                        <h2>รูปแบบการแสดงผล</h2>
+                    </div>
+
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <h3>โหมดมืด</h3>
+                            <p>เปลี่ยนเป็นธีมสีเข้ม</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ขนาดตัวอักษร</label>
+                        <select>
+                            <option>เล็ก</option>
+                            <option selected>ปานกลาง</option>
+                            <option>ใหญ่</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ภาษา</label>
+                        <select>
+                            <option selected>ไทย</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Danger Zone Card -->
+                <div class="settings-card">
+                    <div class="card-header">
+                        <div class="card-icon">⚠️</div>
+                        <h2>โซนอันตราย</h2>
+                    </div>
+
+                    <div class="danger-zone">
+                        <h3>ลบบัญชีผู้ใช้</h3>
+                        <p>การลบบัญชีจะไม่สามารถกู้คืนได้ ข้อมูลทั้งหมดของคุณจะถูกลบออกจากระบบอย่างถาวร</p>
+                        <button class="btn-danger" onclick="deleteAccount()">ลบบัญชีถาวร</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Modal functionality
+        const userAvatar = document.getElementById('userAvatar');
+        const profileModal = document.getElementById('profileModal');
+        const closeBtn = document.querySelector('.close');
+        const btnLogout = document.querySelector('.btn-logout');
+        const btnEdit = document.querySelector('.btn-edit');
+
+        function openModal() {
+            profileModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            profileModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        userAvatar.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', function(event) {
+            if (event.target === profileModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && profileModal.style.display === 'block') {
+                closeModal();
+            }
+        });
+
+        btnLogout.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (confirm('คุณต้องการออกจากระบบหรือไม่?')) {
+                alert('ออกจากระบบสำเร็จ');
+                closeModal();
+            }
+        });
+
+        btnEdit.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('เปิดหน้าแก้ไขข้อมูล');
+            closeModal();
+        });
+
+        // Settings functions
+        function saveProfile() {
+            if (confirm('คุณต้องการบันทึกการเปลี่ยนแปลงหรือไม่?')) {
+                alert('✓ บันทึกข้อมูลสำเร็จ!\n\nข้อมูลโปรไฟล์ของคุณได้รับการอัพเดทแล้ว');
+            }
+        }
+
+        function changePassword() {
+            const currentPassword = document.querySelector('input[placeholder="กรอกรหัสผ่านปัจจุบัน"]').value;
+            const newPassword = document.querySelector('input[placeholder="กรอกรหัสผ่านใหม่"]').value;
+            const confirmPassword = document.querySelector('input[placeholder="กรอกรหัสผ่านใหม่อีกครั้ง"]').value;
+
+            if (!currentPassword || !newPassword || !confirmPassword) {
+                alert('❌ กรุณากรอกข้อมูลให้ครบถ้วน');
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                alert('❌ รหัสผ่านใหม่ไม่ตรงกัน กรุณาลองใหม่อีกครั้ง');
+                return;
+            }
+
+            if (newPassword.length < 8) {
+                alert('❌ รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษร');
+                return;
+            }
+
+            if (confirm('คุณต้องการเปลี่ยนรหัสผ่านหรือไม่?')) {
+                alert('✓ เปลี่ยนรหัสผ่านสำเร็จ!\n\nกรุณาเข้าสู่ระบบด้วยรหัสผ่านใหม่');
+                // Clear password fields
+                document.querySelector('input[placeholder="กรอกรหัสผ่านปัจจุบัน"]').value = '';
+                document.querySelector('input[placeholder="กรอกรหัสผ่านใหม่"]').value = '';
+                document.querySelector('input[placeholder="กรอกรหัสผ่านใหม่อีกครั้ง"]').value = '';
+            }
+        }
+
+        function deleteAccount() {
+            const confirmation = confirm('⚠️ คำเตือน!\n\nคุณแน่ใจหรือไม่ว่าต้องการลบบัญชี?\nการกระทำนี้ไม่สามารถย้อนกลับได้');
+            
+            if (confirmation) {
+                const finalConfirmation = prompt('กรุณาพิมพ์ "DELETE" เพื่อยืนยันการลบบัญชี:');
+                
+                if (finalConfirmation === 'DELETE') {
+                    alert('บัญชีของคุณได้ถูกลบเรียบร้อยแล้ว\nขอบคุณที่ใช้บริการของเรา');
+                    // Redirect to login or home page
+                } else {
+                    alert('ยกเลิกการลบบัญชี');
+                }
+            }
+        }
+
+        // Avatar change button
+        document.querySelector('.btn-change').addEventListener('click', function() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = function(e) {
+                if (e.target.files.length > 0) {
+                    alert('✓ อัพโหลดรูปโปรไฟล์สำเร็จ!\n\nรูปภาพ: ' + e.target.files[0].name);
+                }
+            };
+            input.click();
+        });
+
+        // Avatar remove button
+        document.querySelector('.btn-remove').addEventListener('click', function() {
+            if (confirm('คุณต้องการลบรูปโปรไฟล์หรือไม่?')) {
+                alert('✓ ลบรูปโปรไฟล์สำเร็จ\n\nระบบจะใช้รูปโปรไฟล์เริ่มต้น');
+            }
+        });
+
+        // Toggle switches animation
+        document.querySelectorAll('.toggle-switch input').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const settingName = this.closest('.setting-item').querySelector('h3').textContent;
+                const status = this.checked ? 'เปิด' : 'ปิด';
+                
+                // Show subtle notification
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+                    z-index: 1000;
+                    animation: slideIn 0.3s ease;
+                `;
+                notification.textContent = `${settingName}: ${status}`;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => notification.remove(), 300);
+                }, 2000);
+            });
+        });
+
+        // Add animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

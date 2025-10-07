@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMUTNB - จัดการโครงงาน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/css/style3.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="km">KM</span><span class="ut">UT</span><span class="nb">NB</span>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/หน้าแรก.html"><p>หน้าแรก</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการนักศึกษา.html"><p>จัดการนักศึกษา</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/จัดการอาจารย์.html"><p>จัดการอาจารย์</p></a>
+            </div>
+            <div class="menu-item active">
+                <a href="/เจ้าหน้าที่/จัดการโครงงาน.html"><p>จัดการโครงงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/รายงาน.html"><p>รายงาน</p></a>
+            </div>
+            <div class="menu-item">
+                <a href="/เจ้าหน้าที่/ตั้งค่า.html"><p>ตั้งค่า</p></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo-badge">
+                        <img src="../images/kmutnblogo.png" alt="kmutnblogo" width="75px" height="auto">
+                    </div>
+                    <h1 class="header-title">จัดการโครงงาน</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">👤</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="content">
+                <div class="page-header">
+                    <h2 class="page-title">จัดการโครงงาน</h2>
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option>ทั้งหมด</option>
+                            <option>รอการอนุมัติ</option>
+                            <option>กำลังดำเนินการ</option>
+                            <option>เสร็จสิ้น</option>
+                        </select>
+                        <button class="btn btn-primary">+ สร้างโครงงาน</button>
+                    </div>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="ค้นหาชื่อโครงงาน, นักศึกษา...">
+                    <button class="btn btn-search">🔍 ค้นหา</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>รหัสโครงงาน</th>
+                                <th>ชื่อโครงงาน</th>
+                                <th>นักศึกษา</th>
+                                <th>อาจารย์ที่ปรึกษา</th>
+                                <th>สถานะ</th>
+                                <th>ความก้าวหน้า</th>
+                                <th>การดำเนินการ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>P2025001</td>
+                                <td>ระบบจัดการโครงงานออนไลน์</td>
+                                <td>นายวิชัย แก่งการ</td>
+                                <td>ผศ.ดร.สมศักดิ์ ใจดี</td>
+                                <td><span class="badge badge-info">กำลังดำเนินการ</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <span class="progress-text">60%</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-view">ดู</button>
+                                    <button class="btn btn-edit">แก้ไข</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P2025002</td>
+                                <td>แอปพลิเคชันจัดการคลังสินค้า</td>
+                                <td>นางสาวสมหญิง ใจดี</td>
+                                <td>อ.สมหญิง รักการสอน</td>
+                                <td><span class="badge badge-warning">รอการอนุมัติ</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 20%"></div>
+                                    </div>
+                                    <span class="progress-text">20%</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-view">ดู</button>
+                                    <button class="btn btn-edit">แก้ไข</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>P2024045</td>
+                                <td>ระบบจองห้องประชุมออนไลน์</td>
+                                <td>นายสมชาย ดีงาม</td>
+                                <td>ดร.วิชัย เก่งการสอน</td>
+                                <td><span class="badge badge-success">เสร็จสิ้น</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="progress-text">100%</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-view">ดู</button>
+                                    <button class="btn btn-edit">แก้ไข</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="btn btn-pagination">← ก่อนหน้า</button>
+                    <span class="pagination-info">หน้า 1 จาก 4</span>
+                    <button class="btn btn-pagination">ถัดไป →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

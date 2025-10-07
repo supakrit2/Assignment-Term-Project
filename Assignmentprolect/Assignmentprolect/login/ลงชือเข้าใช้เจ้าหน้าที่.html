@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบเจ้าหน้าที่ - KMUTNB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="/css/เจ้าหน้าที่.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">
+                    <span class="logo-text">
+                        <span class="logo-k">K</span><span class="logo-m">M</span><span class="logo-u">U</span><span class="logo-t">T</span><span class="logo-n">N</span><span class="logo-b">B</span>
+                    </span>
+                </div>
+                <div class="header-title">ระบบสารสนเทศ</div>
+                <div class="header-subtitle">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</div>
+            </div>
+        </div>
+
+        <div class="form-content">
+            <div class="back-link">
+                <a href="#back">← กลับไปเลือกประเภทผู้ใช้</a>
+            </div>
+
+            <div class="welcome-text">
+                <h2>เข้าสู่ระบบเจ้าหน้าที่</h2>
+                <p>กรุณากรอกรหัสเจ้าหน้าที่และรหัสผ่านเพื่อเข้าสู่ระบบ</p>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="username">รหัสเจ้าหน้าที่</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">👔</span>
+                        <input type="text" id="username" placeholder="กรอกรหัสเจ้าหน้าที่หรือ Username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="password" placeholder="กรอกรหัสผ่าน">
+                        <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span>จดจำฉันไว้</span>
+                    </label>
+                    <div class="forgot-links">
+                        <a href="#">ลืมรหัสผ่าน?</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">เข้าสู่ระบบ</button>
+            </form>
+
+            <div class="divider">หรือเข้าสู่ระบบด้วย</div>
+
+            <div class="sso-options">
+                <button class="btn-sso">
+                    🔐 SSO
+                </button>
+                <button class="btn-sso">
+                    🌐 Google
+                </button>
+            </div>
+        </div>
+
+        <div class="support-section">
+            ต้องการความช่วยเหลือ? <a href="#">ติดต่อฝ่าย IT Support</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.querySelector('.password-toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        }
+    </script>
+</body>
+</html>
